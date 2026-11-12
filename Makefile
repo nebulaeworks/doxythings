@@ -11,11 +11,16 @@ test:
 	go vet ./...
 	go test ./...
 
+# DOXYGO is the doxygo filter that lets Doxygen read Go
+# (github.com/nebulaeworks/doxygo): "go install" it, or point this at a
+# checkout's binary, e.g. make docs DOXYGO=../doxygo/bin/doxygo.
+DOXYGO ?= $(shell command -v doxygo)
+
 # docs builds this repository's own Doxygen documentation into build/docs.
 docs:
-	go build -o bin/doxygo ./tools/doxygo
+	@test -n "$(DOXYGO)" || { echo "doxygo not found: go install github.com/nebulaeworks/doxygo@latest, or set DOXYGO"; exit 1; }
 	mkdir -p build/docs
-	doxygen Doxyfile
+	DOXYGO=$(abspath $(DOXYGO)) doxygen Doxyfile
 
 # clean removes build output.
 clean:

@@ -1,5 +1,5 @@
 # Doxygen configuration for doxythings' own documentation.
-# Build with "make docs" (which builds the doxygo filter first); output goes
+# Build with "make docs" (which needs the doxygo filter; see the Makefile); output goes
 # to build/docs/html. Only settings that differ from Doxygen's defaults;
 # the rest follows the C++ projects' (e.g. KORA's) configuration.
 
@@ -7,14 +7,15 @@ PROJECT_NAME           = doxythings
 PROJECT_BRIEF          = "Test, coverage and benchmark results, linked into Doxygen documentation"
 OUTPUT_DIRECTORY       = build/docs
 
-# Go, through the doxygo filter (tools/doxygo), which rewrites each file
-# into C++-shaped declarations on the same lines.
-INPUT                  = README.md cmd internal tools
+# Go, through the doxygo filter (github.com/nebulaeworks/doxygo), which
+# rewrites each file into C++-shaped declarations on the same lines. Set
+# DOXYGO to its path; "make docs" does.
+INPUT                  = README.md cmd internal
 RECURSIVE              = YES
 FILE_PATTERNS          = *.go *.md
 EXCLUDE_PATTERNS       = *_test.go */testdata/*
 EXTENSION_MAPPING      = go=C++
-FILTER_PATTERNS        = *.go=bin/doxygo
+FILTER_PATTERNS        = *.go=$(DOXYGO)
 USE_MDFILE_AS_MAINPAGE = README.md
 TOC_INCLUDE_HEADINGS   = 5
 
