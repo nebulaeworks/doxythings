@@ -1,0 +1,197 @@
+{
+ "context": {
+  "date": "2026-11-08T15:00:00+00:00",
+  "host_name": "fixture-host",
+  "num_cpus": 8,
+  "mhz_per_cpu": 3000,
+  "cpu_scaling_enabled": false,
+  "load_avg": [
+   0.5,
+   0.4,
+   0.3
+  ],
+  "caches": [
+   {
+    "type": "Data",
+    "level": 1,
+    "size": 32768,
+    "num_sharing": 2
+   }
+  ],
+  "library_build_type": "release"
+ },
+ "benchmarks": [
+  {
+   "name": "ToCoreJson/FlatArray",
+   "run_name": "ToCoreJson/FlatArray",
+   "run_type": "iteration",
+   "repetitions": 3,
+   "repetition_index": 0,
+   "iterations": 1000,
+   "real_time": 1242.3,
+   "cpu_time": 1230,
+   "time_unit": "ns"
+  },
+  {
+   "name": "ToCoreJson/FlatArray",
+   "run_name": "ToCoreJson/FlatArray",
+   "run_type": "iteration",
+   "repetitions": 3,
+   "repetition_index": 1,
+   "iterations": 1000,
+   "real_time": 1243.3,
+   "cpu_time": 1231,
+   "time_unit": "ns"
+  },
+  {
+   "name": "ToCoreJson/FlatArray",
+   "run_name": "ToCoreJson/FlatArray",
+   "run_type": "iteration",
+   "repetitions": 3,
+   "repetition_index": 2,
+   "iterations": 1000,
+   "real_time": 1244.3,
+   "cpu_time": 1232,
+   "time_unit": "ns"
+  },
+  {
+   "name": "ToCoreJson/FlatArray_mean",
+   "run_name": "ToCoreJson/FlatArray",
+   "run_type": "aggregate",
+   "aggregate_name": "mean",
+   "iterations": 3,
+   "real_time": 0,
+   "cpu_time": 0,
+   "time_unit": "ns"
+  },
+  {
+   "name": "BlazeBackend/Validate/8",
+   "run_name": "BlazeBackend/Validate/8",
+   "run_type": "iteration",
+   "repetitions": 3,
+   "repetition_index": 0,
+   "iterations": 1000,
+   "real_time": 8494.1,
+   "cpu_time": 8410,
+   "time_unit": "ns"
+  },
+  {
+   "name": "BlazeBackend/Validate/8",
+   "run_name": "BlazeBackend/Validate/8",
+   "run_type": "iteration",
+   "repetitions": 3,
+   "repetition_index": 1,
+   "iterations": 1000,
+   "real_time": 8495.1,
+   "cpu_time": 8411,
+   "time_unit": "ns"
+  },
+  {
+   "name": "BlazeBackend/Validate/8",
+   "run_name": "BlazeBackend/Validate/8",
+   "run_type": "iteration",
+   "repetitions": 3,
+   "repetition_index": 2,
+   "iterations": 1000,
+   "real_time": 8496.1,
+   "cpu_time": 8412,
+   "time_unit": "ns"
+  },
+  {
+   "name": "BlazeBackend/Validate/8_mean",
+   "run_name": "BlazeBackend/Validate/8",
+   "run_type": "aggregate",
+   "aggregate_name": "mean",
+   "iterations": 3,
+   "real_time": 0,
+   "cpu_time": 0,
+   "time_unit": "ns"
+  },
+  {
+   "name": "BlazeBackend/Validate/64",
+   "run_name": "BlazeBackend/Validate/64",
+   "run_type": "iteration",
+   "repetitions": 3,
+   "repetition_index": 0,
+   "iterations": 1000,
+   "real_time": 61812.0,
+   "cpu_time": 61200,
+   "time_unit": "ns"
+  },
+  {
+   "name": "BlazeBackend/Validate/64",
+   "run_name": "BlazeBackend/Validate/64",
+   "run_type": "iteration",
+   "repetitions": 3,
+   "repetition_index": 1,
+   "iterations": 1000,
+   "real_time": 61813.0,
+   "cpu_time": 61201,
+   "time_unit": "ns"
+  },
+  {
+   "name": "BlazeBackend/Validate/64",
+   "run_name": "BlazeBackend/Validate/64",
+   "run_type": "iteration",
+   "repetitions": 3,
+   "repetition_index": 2,
+   "iterations": 1000,
+   "real_time": 61814.0,
+   "cpu_time": 61202,
+   "time_unit": "ns"
+  },
+  {
+   "name": "BlazeBackend/Validate/64_mean",
+   "run_name": "BlazeBackend/Validate/64",
+   "run_type": "aggregate",
+   "aggregate_name": "mean",
+   "iterations": 3,
+   "real_time": 0,
+   "cpu_time": 0,
+   "time_unit": "ns"
+  },
+  {
+   "name": "Unmatched/Result",
+   "run_name": "Unmatched/Result",
+   "run_type": "iteration",
+   "repetitions": 3,
+   "repetition_index": 0,
+   "iterations": 1000,
+   "real_time": 5.05,
+   "cpu_time": 5,
+   "time_unit": "ns"
+  },
+  {
+   "name": "Unmatched/Result",
+   "run_name": "Unmatched/Result",
+   "run_type": "iteration",
+   "repetitions": 3,
+   "repetition_index": 1,
+   "iterations": 1000,
+   "real_time": 6.05,
+   "cpu_time": 6,
+   "time_unit": "ns"
+  },
+  {
+   "name": "Unmatched/Result",
+   "run_name": "Unmatched/Result",
+   "run_type": "iteration",
+   "repetitions": 3,
+   "repetition_index": 2,
+   "iterations": 1000,
+   "real_time": 7.05,
+   "cpu_time": 7,
+   "time_unit": "ns"
+  },
+  {
+   "name": "Unmatched/Result_mean",
+   "run_name": "Unmatched/Result",
+   "run_type": "aggregate",
+   "aggregate_name": "mean",
+   "iterations": 3,
+   "real_time": 0,
+   "cpu_time": 0,
+   "time_unit": "ns"
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+# Paths are relative to the working directory, which the test sets to a
+# scratch directory holding a copy of this fixture.
+PROJECT_NAME     = fixture
+INPUT            = src generated
+FILE_PATTERNS    = *.h *.cpp *.dox
+EXTRACT_STATIC   = YES
+GENERATE_LATEX   = NO
+OUTPUT_DIRECTORY = out
+EXAMPLE_PATH     = fragments
+WARN_LOGFILE     = out/warnings.log
+QUIET            = YES

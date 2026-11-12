@@ -1,0 +1,73 @@
+/* doxythings' collapsible Performance sections.
+ *
+ * Written by "doxythings init", whose doxythings.doxyfile adds it to
+ * HTML_EXTRA_STYLESHEET.
+ * Uses Doxygen's own theme variables, so it follows light and dark mode.
+ * Without it the sections still work, as plain <details> with the
+ * browser's arrow on the left.
+ */
+
+details.doxythings {
+    margin: 1em 0;
+    border: 1px solid var(--memdef-border-color, #a8b8d9);
+    border-radius: 4px;
+    background: var(--page-background-color, #fff);
+}
+
+details.doxythings > summary {
+    display: flex;
+    align-items: center;
+    padding: 4px 10px;
+    cursor: pointer;
+    list-style: none; /* hide the default arrow */
+    font-weight: bold;
+    color: var(--memdef-proto-text-color, #253555);
+    background: var(--memdef-title-background-color, #e2e8f2);
+    border-radius: 4px;
+    user-select: none;
+}
+
+details.doxythings > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Doxygen's own stylesheet draws an arrow on the left; ours is on the right. */
+details.doxythings > summary::before,
+details.doxythings[open] > summary::before {
+    content: none;
+}
+
+/* The arrow, on the right: points right when closed, down when open. */
+details.doxythings > summary::after {
+    content: "";
+    margin-left: auto;
+    width: 0.45em;
+    height: 0.45em;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(-45deg);
+    transition: transform 0.15s;
+}
+
+details.doxythings[open] > summary {
+    border-bottom: 1px solid var(--memdef-border-color, #a8b8d9);
+    border-radius: 4px 4px 0 0;
+}
+
+details.doxythings[open] > summary::after {
+    transform: rotate(45deg);
+}
+
+details.doxythings > summary:focus-visible {
+    outline: 2px solid var(--page-link-color, #3d578c);
+    outline-offset: 2px;
+}
+
+details.doxythings > :not(summary) {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+details.doxythings table.doxtable {
+    margin-top: 8px;
+}
